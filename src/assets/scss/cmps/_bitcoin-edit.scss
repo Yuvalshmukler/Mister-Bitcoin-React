@@ -1,0 +1,32 @@
+.contact-edit {
+    width: rem(450px);
+    margin-top: rem(50px);
+
+    h2 {
+        margin-bottom: rem(35px);
+        font-size: rem(32px);
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: rem(15px);
+
+        button {
+            background-color: rgb(120, 109, 124);
+            padding: rem(6px);
+            border: none;
+            font-weight: 500;
+            color: white;
+            font-size: rem(14px);
+        }
+        button:hover{
+            background-color: rgb(199, 199, 199);
+            color: black;
+        }
+        input {
+            padding: rem(5px);
+            outline: none;
+        }
+    }
+}
