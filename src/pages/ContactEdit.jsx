@@ -17,7 +17,6 @@ export default class ContactEdit extends Component {
     this.setState(prevState => ({ contact: { ...prevState.contact, [field]: value } }))
   }
   onSaveContact = async (ev) => {
-    console.log('hiii');
     ev.preventDefault()
     await contactService.saveContact({ ...this.state.contact })
     this.props.history.push('/')

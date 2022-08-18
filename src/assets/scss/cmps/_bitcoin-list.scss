@@ -1,4 +1,7 @@
 .contact-list {
-    margin: 0 auto;
+    margin: rem(28px) auto ;
     grid-auto-rows: 200px;
+    height: rem(430px);
+    overflow-y: auto ;
+    
 }

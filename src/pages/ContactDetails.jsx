@@ -20,7 +20,7 @@ export class ContactDetails extends Component {
     getUserMoves() {
         const moves = userService.getUser().moves
         const contactId = this.state.contact._id
-        return moves.filter(move => move.toId === contactId )
+        return moves.filter(move => move.toId === contactId)
     }
     async loadContact() {
         const contactId = this.props.match.params.id
@@ -39,18 +39,25 @@ export class ContactDetails extends Component {
     }
 
     render() {
-        const { contact} = this.state
+        const { contact } = this.state
         if (!contact) return <div>Loading...</div>
         return (
-            <div className='contact-details'>
-                <h2> {contact.name}</h2>
-                <h3>Email: {contact.email}</h3>
-                <h3>Phone: {contact.phone}</h3>
+            <section className='details-container'>
                 <img src={`https://robohash.org/${contact._id}`} alt="" />
-                <button onClick={this.onBack}>Back</button>
-                <TransferFund contact={contact} onTransfer={this.onTransfer} ></TransferFund>
-                <MoveList title="Your moves"  moves={this.getUserMoves()}></MoveList>
-            </div>
+                <div className='contact-details'>
+                    <div className='contact-text'>
+                        <h2> {contact.name}</h2>
+                        <h3>Email: {contact.email}</h3>
+                        <h3>Phone: {contact.phone}</h3>
+                    </div>
+                    <div className="transfer-contact">
+                        <TransferFund contact={contact} onTransfer={this.onTransfer} ></TransferFund>
+                        <MoveList title="Your moves:" moves={this.getUserMoves()}></MoveList>
+                    </div>
+                    <button className='back-btn' onClick={this.onBack}>← Back</button>
+                </div >
+            </section>
+
         )
     }
 }

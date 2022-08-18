@@ -1,0 +1,36 @@
+.signup-container {
+    margin-top: em(55px);
+    width: rem(450px);
+
+    h2 {
+        font-size: rem(35px);
+        margin-bottom: rem(38px);
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            font-size: rem(25px);
+            margin-bottom: rem(15px);
+        }
+
+        input,
+        button {
+            padding: rem(8px);
+            border: none;
+            margin-bottom: rem(10px);
+            font-size: rem(15px);
+
+        }
+
+        button {
+            background-color: rgba(238, 64, 131, 0.8588235294);
+            color: aliceblue;
+            font-weight: 400;
+        }
+    }
+
+
+}

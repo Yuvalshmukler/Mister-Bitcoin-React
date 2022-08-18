@@ -33,10 +33,12 @@ export class Home extends Component {
 
         return (
             <section className='home'>
-                <h2>Hello {user.name}!</h2>
+                <h2>Hello {user.name}! </h2>
                 <p>Your balance is: {user.coins}</p>
                 <p>BTC: {rate}</p>
-                <MoveList moves={this.getLastMoves()} title={`Your last ${this.getLastMoves().length} moves`}></MoveList>
+                <img className='home-btc-icon' src="https://alenchernick.github.io/misterBitCoin-React/static/media/btc-icon.7f9e5e703a51754df4db.png" alt="" srcset="" />
+
+                <MoveList moves={this.getLastMoves()} title={`Your last ${this.getLastMoves().length} moves:`}></MoveList>
             </section>
         )
     }

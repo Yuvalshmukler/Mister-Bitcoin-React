@@ -19,7 +19,6 @@ export class ContactFilter extends Component {
         const { name, phone, email } = this.state
         return (
             <section>
-                <h3 className='filter-title'>Filter By:</h3>
                 <form className='contact-filter'>
                     <section>
                         <label htmlFor="name">Name</label>

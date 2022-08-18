@@ -19,21 +19,21 @@ function signup(userName) {
     storageService.store(USER_KEY, user)
 }
 function model(contact, amount) {
+    if (amount == 0 || amount < 0 || amount === "") return alert('Please try again')
     const updatedContact = {
         toId: contact._id,
         to: contact.name,
-        at: new Date(Date.now()),
+        at: new Date().toLocaleString(),
         amount,
     }
-    if (amount === 0) return
     _updateUserCoins(amount,updatedContact)
 }
 
 
 function _updateUserCoins(amount,move) {
     const user = getUser()
+    if((user.coins - amount) <= 0) return alert('Cannot transfer money,please cheack your balance')
     user.coins -= amount
     user.moves.push(move)
     storageService.store(USER_KEY, user)
-    console.log(user);
 }

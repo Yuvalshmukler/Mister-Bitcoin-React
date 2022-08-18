@@ -1,7 +1,7 @@
 .contact-preview {
     display: flex;
+    background-color: rgba(113, 113, 113, 0.912);
     flex-direction: column;
-    background-color: #e91e630a;
     text-align: center;
     box-shadow: 3px 1px 15px #00000026;
     border-radius: 5px;
@@ -23,13 +23,22 @@
         background-color: #00000093;
         transform: translateY(100%);
         transition: transform 0.3s;
-        > button,a{
-            color: whitesmoke;
+        padding: rem(5px);
+
+        >button,
+        a {
             background: none;
             font-size: rem(17px);
             border: none;
+
+            &:first-child {
+                color: #dd1f68;
+
+            }
+
             &:hover {
                 text-decoration: underline;
+
             }
         }
     }

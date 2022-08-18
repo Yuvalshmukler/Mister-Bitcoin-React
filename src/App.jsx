@@ -33,7 +33,7 @@ function App() {
         </main>
         <footer>
           <section className='container'>
-            bitcoinRights 2022 &copy;
+            bitcoinRights YuvalShmukler 2022 &copy;
           </section>
         </footer>
       </div>

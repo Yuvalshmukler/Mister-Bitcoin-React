@@ -1,0 +1,80 @@
+.details-container {
+    display: flex;
+    gap: rem(15px);
+    padding: rem(19px);
+    background-color: rgba(110, 110, 110, 0.906);
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+
+    .contact-details {
+        margin-top: rem(55px);
+
+        .contact-text {
+            margin-bottom: rem(15px);
+
+            h2 {
+                color: #343434;
+                font-weight: 600;
+                font-size: rem(32px);
+                margin-bottom: rem(6px);
+            }
+
+            h3 {
+                font-size: rem(18px);
+                margin-bottom: rem(6px);
+
+            }
+        }
+
+        .transfer-contact {
+
+            h2 {
+                margin: rem(10px) 0 0 0;
+                color: #343434;
+                font-weight: 600;
+            }
+
+            h3 {
+                font-size: rem(25px);
+                font-weight: 500;
+                margin: rem(10px) 0;
+            }
+
+            input {
+                margin: rem(5px) 0;
+                padding: rem(5px);
+            }
+
+            button {
+                background-color: #c82966;
+                border: none;
+                padding: rem(7px);
+                color: rgb(216, 216, 216);
+            }
+
+            .move-list {
+                display: flex;
+                height: rem(100px);
+                overflow-y: auto;
+
+                flex-direction: column;
+                margin-bottom: rem(15px);
+            }
+
+            .move-preivew {
+                padding: rem(15px);
+                background-color: #343434;
+                margin-bottom: rem(15px);
+            }
+
+        }
+    }
+
+    .back-btn {
+        margin-top: rem(15px);
+        padding: 6px 8px;
+        border: none;
+        font-size: rem(16px);
+        background-color: #343434;
+        color: rgb(216, 216, 216);
+    }
+}

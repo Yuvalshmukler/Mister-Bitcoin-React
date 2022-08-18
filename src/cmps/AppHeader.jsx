@@ -5,7 +5,7 @@ function _AppHeader(props) {
     return (
         <header className='app-header'>
             <section className='container'>
-                <h1 className="logo">Bit Coin</h1>
+                <h1 className="logo">Bitcoin</h1>
                 <section className="back">
                     <button className='header-btn' onClick={props.history.goBack}>Back</button>
                 </section>
@@ -13,7 +13,7 @@ function _AppHeader(props) {
                     <NavLink exact to='/' >Home</NavLink>
                     <NavLink to='/Contacts'>Contact</NavLink>
                     <NavLink to='/Statistics'>Statistics</NavLink>
-                    <NavLink to='/Signup'>Signup</NavLink>
+                    <NavLink className='signup-btn' to='/Signup'>Signup</NavLink>
                 </nav>
             </section>
         </header>

@@ -10,7 +10,7 @@ export default function TransferFund({ contact, onTransfer }) {
             }}
                 >
                 <label htmlFor="amount"></label>
-                <input name='amount' type="number" id='amount' />
+                <input name='amount' type="number" id='amount' placeholder='Enter amount' />
                 <button>Transfer</button>
             </form>
         </div>

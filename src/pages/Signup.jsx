@@ -4,8 +4,8 @@ import { userService } from '../services/userService'
 export class Signup extends Component {
   onSignUp = (ev) => {
     ev.preventDefault()
-    const {value} = ev.target.elements.name
-    if(value === '') return 
+    const { value } = ev.target.elements.name
+    if (value === '') return
     console.log(value);
     userService.signup(value)
     this.props.history.push('/')
@@ -13,11 +13,11 @@ export class Signup extends Component {
 
   render() {
     return (
-      <section>
-        <h2>Signup for more!</h2>
+      <section className='signup-container'>
+        <h2>Signup for more! </h2>
         <form onSubmit={this.onSignUp} className='signup-form'>
           <label htmlFor="name">Please enter your name</label>
-          <input type="text" name="name" id='name' />
+          <input type="text" name="name" id='name' placeholder='One step away' />
           <button className='signup-btn'>Sign up</button>
         </form>
       </section>
